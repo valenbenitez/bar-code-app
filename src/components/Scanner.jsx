@@ -8,7 +8,7 @@ function Scanner() {
     const scanner = new Html5QrcodeScanner("reader", {
       qrbox: {
         width: 250,
-        height: 250,
+        height: 150,
       },
       fps: 5,
     });
