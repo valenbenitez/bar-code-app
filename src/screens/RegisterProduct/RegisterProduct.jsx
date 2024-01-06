@@ -1,14 +1,17 @@
 import React from "react";
-import Scanner from "../../components/Scanner";
+import Scanner from "../../components/Scanner/Scanner";
+import * as Styled from "./style";
+import NavBar from "../../components/NavBar/NavBar";
 
 function RegisterProduct() {
   return (
-    <div>
+    <Styled.Container>
       <h4>Registrar producto</h4>
-      <div style={{ width: "400px", height: "40svh" }}>
+      <Styled.Content>
         <Scanner />
-      </div>
-    </div>
+      </Styled.Content>
+      <NavBar />
+    </Styled.Container>
   );
 }
 

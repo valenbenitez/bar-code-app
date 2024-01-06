@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Html5QrcodeScanner } from "html5-qrcode";
-import { registerProductService } from "../services/product";
-import SimpleSnackbar from "./SnackBar";
+import { registerProductService } from "../../services/product";
+import SimpleSnackbar from "../SnackBar";
 import { useNavigate } from "react-router-dom";
+import * as Styled from "./style";
 
 function Scanner() {
   const [open, setOpen] = useState(false);
@@ -80,9 +81,9 @@ function Scanner() {
       setScan(false);
     }
   }
-  console.log(scanned);
+
   return (
-    <div>
+    <Styled.Container>
       <SimpleSnackbar
         open={open}
         setOpen={setOpen}
@@ -108,11 +109,12 @@ function Scanner() {
         </>
       ) : (
         <>
-          <div id="reader"></div>
+          <div id="reader" style={{ width: "100%" }}></div>
+          <br />
           <button onClick={newScanner}>Volver a escanear</button>
         </>
       )}
-    </div>
+    </Styled.Container>
   );
 }
 
